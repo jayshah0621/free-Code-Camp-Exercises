@@ -1,0 +1,25 @@
+// Opposite of Diff Two Arrays
+// Compare two arrays and find similar items. 
+// For comparison, merge two arrays. Sort the merged array. 
+// Return only unique values.
+
+/************** Solutions **************/
+
+function compareArray(arr1, arr2) {
+  var newArr = [];
+  var mergedArr = arr1.concat(arr2).sort();
+  
+  for(var i=0;i<mergedArr.length;i++) {
+  	if( arr1.includes( mergedArr[i] ) && arr2.includes( mergedArr[i] ) && !newArr.includes( mergedArr[i] ) ) {
+    	newArr.push(mergedArr[i]);
+    }
+  }
+  
+  return newArr;
+}
+
+var comArr = compareArray([5,2,8,1,0,4], [2,9,8,3,7,4,1,6]);
+console.log(comArr);
+
+// Output
+[1, 2, 4, 8]
