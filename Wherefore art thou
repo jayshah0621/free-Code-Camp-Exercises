@@ -20,3 +20,8 @@ function whatIsInAName(collection, source) {
 
 var findArr = whatIsInAName([{ first: "Romeo", last: "Montague" }, { first: "Mercutio", last: null }, { first: "Tybalt", last: "Capulet" }], { last: "Capulet" });
 console.log(findArr);
+
+
+// Output
+
+{first: "Tybalt", last: "Capulet"}
