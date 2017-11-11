@@ -1,1 +1,3 @@
-# free-Code-Camp-Exercises
+# freeCodeCamp Exercises
+
+Excercises from https://www.freecodecamp.org/map
