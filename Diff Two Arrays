@@ -1,0 +1,17 @@
+// https://www.freecodecamp.org/challenges/diff-two-arrays
+
+function diffArray(arr1, arr2) {
+  var newArr = [];
+  var mergedArr = arr1.concat(arr2).sort();
+  
+  for(var i=0;i<mergedArr.length;i++) {
+  	if( ! ( arr1.includes( mergedArr[i] ) && arr2.includes( mergedArr[i] ) ) ) {
+    	newArr.push(mergedArr[i]);
+    }
+  }
+  
+  return newArr;
+}
+
+var diffArr = diffArray([5,2,8,1,0,4], [2,9,8,3,7,4,1,6]);
+console.log(diffArr);
