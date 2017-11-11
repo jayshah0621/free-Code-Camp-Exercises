@@ -1,5 +1,8 @@
 // https://www.freecodecamp.org/challenges/diff-two-arrays
 
+// Compare two arrays and return a new array with any items only found in one of the two given arrays, but not both.
+
+
 function diffArray(arr1, arr2) {
   var newArr = [];
   var mergedArr = arr1.concat(arr2).sort();
