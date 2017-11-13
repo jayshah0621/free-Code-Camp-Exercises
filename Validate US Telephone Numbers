@@ -1,0 +1,30 @@
+// https://www.freecodecamp.org/challenges/validate-us-telephone-numbers
+
+// Test regular expression online as you form the regex: https://regex101.com/
+
+/************** Solution **************/
+
+function telephoneCheck(str) {
+  var numberCheck = /^([1]?( |-)?([1-9]{3}|\([1-9]{3}\))( |-)?\d{3}( |-)?\d{4})$/g;
+  console.log(numberCheck.test(str));
+}
+
+telephoneCheck("555-555-5555");
+
+// Output
+true
+
+telephoneCheck("1 (555) 555-5555");
+
+// Output
+true
+
+telephoneCheck("1 555)555-5555");
+
+// Output
+false
+
+telephoneCheck("555)-555-5555");
+
+// Output
+false
