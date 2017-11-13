@@ -1,0 +1,29 @@
+// https://www.freecodecamp.org/challenges/dna-pairing
+// The DNA strand is missing the pairing element. Take each character, get its pair, and return the results as a 2d array.
+// The pairs are [ A => T, G => C, T => A, C => G ]
+// For example, for the input GCG, return [["G", "C"], ["C","G"],["G", "C"]]
+
+/************** Solution **************/
+
+function pairElement(str) {
+  var dnaPairs = { A: "T", T: "A", G: "C", C: "G" };
+  var dnaArray = [];
+  
+  for(var i=0;i<str.length;i++){
+  	dnaArray[i] = [];
+  	dnaArray[i][0] = str.charAt(i);
+    dnaArray[i][1] = dnaPairs[str.charAt(i)];
+  }
+  
+  console.log(dnaArray);
+}
+
+pairElement("ATCGA");
+
+// Output
+[["A","T"],["T","A"],["C","G"],["G","C"],["A","T"]]
+
+pairElement("TTGAG");
+
+// Output
+[["T","A"],["T","A"],["G","C"],["A","T"],["G","C"]]
