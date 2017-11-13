@@ -11,8 +11,8 @@ function pairElement(str) {
   
   for(var i=0;i<str.length;i++){
   	dnaArray[i] = [];
-  	dnaArray[i][0] = str.charAt(i);
-    dnaArray[i][1] = dnaPairs[str.charAt(i)];
+  	dnaArray[i][0] = str[i];
+    dnaArray[i][1] = dnaPairs[str[i]];
   }
   
   console.log(dnaArray);
