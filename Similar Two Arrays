@@ -3,7 +3,7 @@
 // For comparison, merge two arrays. Sort the merged array. 
 // Return only unique values.
 
-/************** Solutions **************/
+/************** Solution **************/
 
 function compareArray(arr1, arr2) {
   var newArr = [];
