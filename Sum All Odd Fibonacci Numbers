@@ -1,0 +1,39 @@
+// https://www.freecodecamp.org/challenges/sum-all-odd-fibonacci-numbers
+
+// Given a positive integer num, return the sum of all odd Fibonacci numbers that are less than or equal to num.
+
+/************** Solution **************/
+
+function sumOddFibs(num) {
+  var fibSeries = [1,1],
+  		oddFibs = [1,1];
+  
+  for(let i=2;i<num;i++) { 
+			let fibNum = fibSeries[i-1] + fibSeries[i-2];
+      
+      if(fibNum <= num) {
+        fibSeries.push( fibNum );
+        
+        if( fibNum % 2 !== 0 ) { oddFibs.push( fibNum ); }
+      }
+	}
+  
+  let oddFibsSum = oddFibs.reduce( (accumulator, currentValue) => accumulator + currentValue );
+  
+  console.log(oddFibsSum);
+}
+
+sumOddFibs(10);
+
+// Output
+10
+
+sumOddFibs(75024); 
+
+// Output
+60696
+
+sumOddFibs(75025); 
+
+// Output
+135721
