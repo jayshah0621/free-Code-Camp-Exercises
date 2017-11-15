@@ -1,0 +1,11 @@
+// Not part of FCC exercises. Just for fun.
+
+var i = 1;
+
+while( i <= 100 ) {
+	var whatIsIt = ( i % 15 == 0 ) ? 'FizzBuzz' : ( i % 3 == 0 ) ? 'Fizz' : ( i % 5 == 0 ) ? 'Buzz' : i;
+  
+  console.log(whatIsIt);
+  
+  i++;
+};
